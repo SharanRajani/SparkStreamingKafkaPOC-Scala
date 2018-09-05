@@ -35,7 +35,7 @@ object Cons {
       ConsumerStrategies.Subscribe[Integer, User](topics, kafkaParams)
     )
     var newstream = stream.map(record => (record.value.getField1))
-    var beg=newstream.map(vl=>(vl,1))
+    var beg = newstream.map(vl => (vl, 1))
     var wordcount = beg.reduceByKey((x, y) => x + y)
     wordcount.foreachRDD(rdd => rdd.foreach(println))
 
