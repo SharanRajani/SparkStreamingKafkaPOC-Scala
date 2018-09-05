@@ -19,10 +19,11 @@ object Prod {
     val producer = new KafkaProducer[Integer, User](properties)
     val r = new Random()
     r.setSeed(Calendar.getInstance().get(Calendar.SECOND))
-    var cnt = 0;
-    val key = 1
+    var cnt = 0
+    var key = 1
     try {
       while (true) {
+        key=r.nextInt(10)
         val user = User.newBuilder().setField1(r.nextBoolean().toString).build()
         val pr = new ProducerRecord[Integer, User](topic, key, user)
         val metadata = producer.send(pr).get()
