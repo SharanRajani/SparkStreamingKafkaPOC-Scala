@@ -1,0 +1,7 @@
+{"namespace": "com.exa",
+ "type": "record",
+ "name": "User",
+ "fields": [
+     {"name": "field1", "type": "string"}
+  ]
+}
