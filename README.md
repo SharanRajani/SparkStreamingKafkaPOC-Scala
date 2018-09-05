@@ -1,4 +1,4 @@
-# Apache Kafka Producer and Consumer in which uses Spark-Streaming and Avro Serialization written in Scala.
+# Apache Kafka Producer and Consumer which uses Spark-Streaming and Avro Serialization written in Scala.
 
 
 Steps for execution and corresponding explanation:
